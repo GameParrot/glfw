@@ -864,7 +864,7 @@ static GLFWbool createNativeWindow(_GLFWwindow* window,
         if (wndconfig->maximized)
             [window->ns.object zoom:nil];
     }
-
+    [window->ns.object setBackgroundColor: NSColor.blackColor];
     if (strlen(wndconfig->ns.frameName))
         [window->ns.object setFrameAutosaveName:@(wndconfig->ns.frameName)];
 
