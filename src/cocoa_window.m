@@ -847,8 +847,11 @@ static GLFWbool createNativeWindow(_GLFWwindow* window,
         [window->ns.object setOpaque:NO];
         [window->ns.object setHasShadow:NO];
         [window->ns.object setBackgroundColor:[NSColor clearColor]];
+    } else {
+        // The white background appears as a glowing effect in Minecraft angle (OpenGL backend)
+        [window->ns.object setBackgroundColor:[NSColor blackColor]];
     }
-    [window->ns.object setBackgroundColor: NSColor.blackColor];
+
     [window->ns.object setContentView:window->ns.view];
     [window->ns.object makeFirstResponder:window->ns.view];
     [window->ns.object setTitle:@(wndconfig->title)];
