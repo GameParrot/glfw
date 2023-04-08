@@ -2053,4 +2053,3 @@ GLFWAPI id glfwGetCocoaWindow(GLFWwindow* handle)
 }
 
 #endif // _GLFW_COCOA
-
